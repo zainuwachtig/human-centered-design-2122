@@ -1,139 +1,105 @@
-# Human Centered Design @cmda-minor-web 2021 - 2022
+# Larissa's sportschema
 
-Human Centered Design is een  methode voor het ontwerpen van gebruiksvriendelijke interactieve toepassingen.
+## Beschrijving
 
-> What distinguishes Human-Centered Design from other problem-solving approaches is its obsessive focus on understanding the perspective of the person who experiences a problem, their needs, and whether the solution that has been designed for them is truly meeting their needs effectively or not. At its most effective, the very people who experience a problem the most are a constant part of the design process and when possible, become part of the design team itself. - [What Is Human-Centered Design?](https://medium.com/dc-design/what-is-human-centered-design-6711c09e2779)
+### Opdracht
 
-Door regelmatig te testen met je doelgroep kom je tot een beter en passend ontwerp. 
-Een Frontend Designer en Developer heeft verstand van interactie, vormgeving én techniek. 
-Als je web technieken beheerst kun je je ideeën snel prototypen en testen in een browser. Je kan dan aanpassingen doorvoeren, uitproberen en weer testen ...
-        
-In het vak Human Centered Design gaan we dingen ontwerpen voor echte mensen. 
-Is er goede interactie? Kan je 'mens' je product op een prettige manier bedienen? 
-Wat voor principes heb je gebruikt en getest? En is het leuk?
+Larissa is blind. Ze maakt gebruik van een brailleregel, en van een screenreader. Je snapt dat heel veel van de gangbare design patterns niet optimaal werken voor haar omdat ze 100% vanuit een visueel oogpunt ontworpen zijn. Larissa is student aan de HvA. En daarnaast is ze topsporter. Ze heeft laatst een gouden medaille gewonnen op de olympische spelen.
 
-## Opdracht
+De opdracht luidt als volgt:
 
-### Ontwerpen met en voor echte mensen
+> Alle topwielrenners krijgen om de zoveel tijd een Excel sheet toegestuurd waarin alle trainingsschema’s staan. Dit is een uitgebreid, complex ding. En hij is _colour coded_. Je moet dus kunnen zien om hem te kunnen gebruiken. Dat kunnen jullie beter. Dus. Ontwerp een oplossing waardoor Larissa op een prettige en manier de relevante data kan gebruiken.
 
-Voor dit vak krijg je een ontwerp-opdracht die je gaat maken voor 1 mens. 
-Een echt mens. 
-Je moet je ontwerp 3 keer testen. 
-Door te testen en te itereren ga je je ontwerp verbeteren. 
-Uiteindelijk heb je een ontwerp dat exclusief gemaakt is voor 1 persoon. 
-Een _exclusive design_ ... 
-Wie is deze persoon dan voor wie je dit gaat maken? 
-Wat vindt deze persoon leuk of juist niet? 
-En hoe bedient deze persoon een computer?
+Bron: [Minor Web 21/22 Github](https://github.com/cmda-minor-web/human-centered-design-2122/blob/main/course/opdracht-human-centered-design.md#larissa-klaassen)
 
-- [Opdracht - Ontwerpen met en voor echte mensen](course/opdracht-human-centered-design.md)
+### Probleem
 
-### Leerdoelen
+Het probleem is dus dat Larissa blind is en haar trainingschema moeilijk kan volgen omdat het voornamelijk gebaseerd is op kleur.
 
-- _Leren hoe je (design) principles in een ontwerp kan toepassen._
-- _User needs begrijpen en gebruiken in je ontwerp._
-- _Leren hoe je moet testen en de resultaten gebruiken voor het verbeteren van je ontwerp._
+### Oplossing
 
-[Rubric](#rubric)
+De oplossing is een schema die werkt met een voice-over waarmee ze de trainingen per week en belangrijke data, bijvoorbeeld wedstrijden van het hele jaar kan zien. Ook is er de mogelijkheid om een specifieke datum te zoeken.
 
-## Planning & programma
+## Design Principles
 
-| Planning  | Woensdag  |  Donderdag | Vrijdag  |
-|---|---|---|---|
-| [Week 1](#week-1---kickoff-en-aannames-testen)  | Intro, College exclusive design + Testen | College + Testen | Feedbackgesprekken |
-| [Week 2](#week-2---prototypen-en-testen)  | ~~Koningsdag~~  | College + Testen | Feedbackgesprekken  |
-| ~~Meivakantie~~ |   |  |   |
-| [Week 3](#week-3---prototypen-testen-en-reflecteren)  | College + Testen  |  College + Testen | Beoordelingsgesprekken  |
+Hoe heb ik de vier design principles terug laten komen in mijn werk?
 
+### Study situation
 
-## Week 1 - Kickoff en aannames testen 
+Door middel van study situation duiken we dieper in de individuele situatie van de testpersoon, in dit geval Larissa. Zij gebruikt haar computer anders dan de gemiddelde persoon, namelijk met een screenreader. Apple heeft een ingebouwde screenreader, VoiceOver, deze werkt wel prima maar vertelt wel heel veel over een element, iets te veel misschien soms. Larissa heeft zowel een Apple device als een Windows laptop en hierop wordt JAWS gedraaid wat een erg duur computerschermleesprogramma is, wel kan hiermee een brailleleesregel aangesloten worden, maar die gebruikt ze niet veel.
 
-Deze week krijg je een college over _Exclusive Design Principles_. Deze Principles ga je toepassen in de opdracht. Op woensdag en donderdag gaan we kennis maken met de echte mensen voor wie we gaan ontwerpen. Je kan dan al een kleine interactieve demo maken om te testen.
+### Prioritise identity
 
-### Woensdag 20 april
+Het is belangrijk om Larissa op nummer 1 te zetten en dus ook om de elementen semantische waardes te geven om het ook makkelijker te maken voor de VoiceOver. Ondanks dat ze maar 1% ziet, als ze dicht op het scherm zit ziet ze wel wat, daarom heb ik wel iconen toegevoegd voor als ze er dicht op zit, maar een `aria-hidden: true` zodat de VoiceOver de svg's niet uitspreekt.
 
-Woensdag is de eerste les van het vak Human Centered Design. Je krijgt een intro college over het vak en Vasilis gaat vertellen over _Exclusive Design_.
+### Ignore conventions
 
-Daarna prototypen en testen.
+Het is belangrijk om de elementen semantisch correct weer te geven. In het jaarrooster zou je een ordered list hebben van 1 tot en met 52 met daarin buttons om naar de goede week te gaan. Dit klinkt logisch maar klinkt niet lekker uit de screenreader, die noemt namelijk steeds alle elementen waaruit het is opgebouwd, waarvoor het heel lang duurt dat je hoort bij welke week je bent. Daarom heb ik alleen buttons gebruikt in plaats van list items.
 
-### Donderdag 21 april
+### Add nonsense
 
-Donderdag begint de les met het delen van bevindingen van de test van woensdag. Ook gaan we deze les het artikel [Exclusive Design van Vasilis van Gemert](https://exclusive-design.vasilis.nl/) bespreken.
+Bij sommige dagen is een mop toegevoegd, je ziet ze niet op het scherm maar alleen als je met VoiceOver er doorheen gaat. Dat maakt het extra voor Larissa.
 
-Daarna prototypen en testen.
+## User Scenario
 
-### Vrijdag 22 april
+Wie is de testpersoon, wat doet die, hoe doet die dat en waarom?
 
-Feedbackgesprekken in groepen.
+### Wie?
 
+Larissa Klaassen is 28 en topsporter, ze is Blind en ziet maar 1% (voorheen was dit wel nog 16%). Larissa is vrij chaotisch en alles wat niet mag of niet de bedoeling is, doet zij liever wel. Ze heeft diverse keren meegedaan aan para-baanwielrennen op de Olympische Spelen en daarmee ook medailles gewonnen!
 
-## Week 2 - Prototypen en testen 
+### Wat?
 
-Deze week heb je het tweede gesprek met je mens. Wat ga je testen? Wat wil je weten? Woensdag is het koningsdag, dan is er geen les.
+Larissa wil graag haar schema zien met wanneer ze moet trainen, wedstrijden spelen of test-momenten heeft. Dit wil ze het liefst op weekniveau omdat ze niet zo van het ver vooruit plannen is. Wel moet de mogelijkheid er zijn om snel een datum te vinden.
 
-### Donderdag 28 april
+### Hoe?
 
-Donderdag krijg je een college over testen. Voor deze les moet je het artikel [10 Usability Lessons van Steve Krug](https://www.uxbooth.com/articles/10-usability-lessons-from-steve-krugs-dont-make-me-think/) en [How User Scenarios Help To Improve Your UX van Sabina Idler](https://usabilla.com/blog/how-user-scenarios-help-to-improve-your-ux/) lezen.
+Larissa doet dit aan de hand van een screenreader, die leest alle informatie voor op de website. Het is dus belangrijk dat de elementen op zowel de juiste manier gegroepeerd als semantisch zijn.
 
-'s Middags ga je voor de tweede keer prototypen en testen.
+### Waarom?
 
-### Vrijdag 29 april
+Als topsporter is het natuurlijk belangrijk om te weten wanneer en wat je gaat trainen de aankomende week, daarom moet je snel kunnen zien of horen wat je te komen staat.
 
-Feedbackgesprekken in groepen.
+## Testen
 
+### Week 1
 
-## Week 3 - Prototypen, testen en reflecteren
+Voor de eerste week had ik nog niet genoeg voorbereid om iets te kunnen testen en diende dit meer als kennismaking, waar we ook de tijd namen om met elkaar vragen te stellen aan Larissa. Een paar belangrijke inzichten hieruit zijn:
 
-In week 3 gaan we verder met testen, itereren en reflecteren. Deze week is de laatste sessie met je mens.
+- Larissa ziet 1%, dit betekent dat wanneer zij heel dicht op het scherm zit, ze nog wel iets ziet. Niet veel, maar als er een hoog contrast is (met voorkeur van een donkere achtergrond) en het in grote vlakken verdeeld is, ze er nog wel wat mee kan. Ook is de voorkeur voor een niet al te gek font, dus gewoon een sans-serif.
+- Ze traint zes keer per week, dit kan zijn baantraining, starttraining of krachttraining. Wanneer ze moet trainen kan ze checken in de Trainingpeaks app (wat niet een fijne app is, dus maakt ze eigelijk haar eigen schema's). Aan de andere kant maakt ze niet echt gebruik van trainingschema's en doet ze veel op gevoel, ze weet bijvoorbeeld niet wat haar lichaam over drie maanden wil. Daarom vind ze het fijn om haar trainingschema per week te krijgen en per maand voor grotere evenementen, denk hierbij aan wedstrijden, trainingskampen, Olympische spelen.
+- Ten slotte moet het logisch en duidelijk zijn, maak het allemaal niet lastiger en leuker dan het is.
 
-### Woensdag 11 mei
+### Week 2
 
-Woensdag beginnen we met een college. Voor deze les moet je dit artikel lezen: [Design for Both Needs and Wants: Applying Anderson’s User Experience Hierarchy of Needs](https://thevisualcommunicationguy.com/2018/11/08/design-for-both-needs-and-wants-applying-andersons-user-experience-hierarchy-of-needs/)
+Voor de tweede week heb ik iets gemaakt op basis van de inzichten van vorige week. Zo heb ik gebruik gemaakt van vlakken met een duidelijk contrast. Ook staan er grote iconen zodat wanneer ze dicht op het beeld zit, ze snel(ler) kan zien wat voor soort training het is.
 
-Daarna prototypen en testen.
+Een paar inzichten uit het testen van deze week waren:
 
-### Donderdag 12 mei
+- Een focusstate toevoegen kan handig zijn.
+- De wedstrijden er nog op een manier in verwerken.
+- Snel weten wat vandaag en morgen op het schema is.
+- Screenreader van mac vertelt iets te veel informatie, dit kan verwarrend en langdradig zijn voor Larissa.
+- Voornamelijk de tab toets wordt gebruikt.
 
-Donderdag gaan we bevindingen van de tests bespreken. 
+### Week 3
 
-Daarna prototypen en testen.
+Voor de derde week heb ik de vorige versie aangepast met de trainingen horizontaal, zodat die de datum en wat voor soort training in één keer uitspreekt. Ook heb ik een jaarrooster toegevoegd met daarin de wedstrijden en wanneer de Olympische Spelen zijn. Ook heb ik de zoekfunctie uitgewerkt en op de knoppen een contrastkleur toegevoegd op de focus. Ze was erg tevreden met de applicatie en had dus niet veel meer op te merken.
 
-### Vrijdag 13 mei
+Inzichten uit het testen van deze week:
 
-Op vrijdag zijn de beoordelingsgesprekken. Je hebt dan een gesprek waarin we je vorderingen en bevindingen bespreekt. We verwachten dat je op Github je tests en iteraties hebt beschreven. Belangrijk is dat je reflecteert op de leerdoelen van het vak. 
+- Knoppen werken erg fijn, goede grootte, zoals bij het zoeken.
+- Contrast is erg fijn, ook bij de focusstate.
+- Larissa heeft het jaaroverzicht niet gebruikt, ook na meerdere keren zeggen dat die er is.
+- Als je extra punten wil scoren kan je nog de tijd toevoegen van hoe laat een training is, maar de applicatie werkt al goed zoals die nu is.
 
+## Reflectie
 
+Ik ben nog niet klaar, maar ben wel tevreden over mijn prototype. Ook dat Larissa het een goed werkende applicatie vindt, doet me goed want daar doen we het voor, exclusive design. Wel hoef ik me in het vervolg niet druk te maken of wat ik heb gemaakt voldoende is om te testen, je test voor haar en niet voor jezelf. Dat is iets wat ik meeneem in het vervolg. Ook vind ik dat ik het vak wel gehaald heb op basis van de drie leerdoelen:
 
-## Rubric
-
-De opdracht wordt beoordeeld aan de hand van onderstaande rubric. Je moet slagen voor het criterium (middenkolom) om het vak te halen. 
-
-| Ontoereikend  | Criteria  |  Verbetering |
-|---|---|---|
-|  | Readme - In de beschrijving van het project staat de opdracht uitgelegd, is het probleem duidelijk beschreven en hoe het probleem is opgelost. | | 
-|  | Design Principles - Student laat zien hoe de Exclusive Design Principles zijn toegepast in het ontwerp. De principes study situation, prioritise identity, ignore conventions en add nonsense zijn goed uitgelegd. Aan de hand van de principes wordt duidelijk gemaakt hoe deze hebben bijgedragen aan het verbeteren van het ontwerp. | | 
-|  | User Needs - Er is een user scenario geschreven dat aansluit bij de identiteit van de test persoon. Er is een duidelijk en volledig user scenario geschreven dat antwoord geeft op de 4 w-vragen: Who? What? How? en Why? | | 
-|  | Testen - Er is minimaal drie keer getest. Er is een verslaglegging van de tests gedaan waarin de test-opzet wordt behandeld en er is een duidelijke conclusie beschreven met do's en dont's over hoe je goed kan testen. | | 
-|  | Testresultaten - Aan de hand van de tests wordt duidelijk gemaakt hoe deze hebben bijgedragen aan het verbeteren van het ontwerp of hoe dit een volgende keer beter of anders kan. | | 
-
-
-
-
-
-<!-- Add a link to your live demo in Github Pages 🌐-->
-
-<!-- ☝️ replace this description with a description of your own work -->
-
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
-
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
-
-<!-- Maybe a table of contents here? 📚 -->
-
-<!-- How about a section that describes how to install this project? 🤓 -->
-
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+1. Leren hoe je (design) principles in een ontwerp kan toepassen.
+   Ja, ik vond de principles best prima toe te passen, alleen het stukje add nonsense was wat lastiger. In de laatste week wist ik gelukkig nog wel wat toe te voegen om het voor Larissa nog plezieriger te maken.
+2. User needs begrijpen en gebruiken in je ontwerp.
+   - De user needs zijn duidelijk en verwerkt in het ontwerp, daarom vond Larissa het ook goede en fijne applicatie om te gebruiken.
+3. Leren hoe je moet testen en de resultaten gebruiken voor het verbeteren van je ontwerp.
+   - Ja, in het vervolg kan ik nog wel meer kunnen testen, want zoals ik benoemde, je test voor de testpersoon en niet voor jezelf.

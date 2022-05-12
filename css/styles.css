@@ -23,14 +23,14 @@ h3 {
 }
 
 header {
-  width: 90vw;
+  width: 70vw;
   display: flex;
   justify-content: space-around;
-  margin: 5em auto 0 auto;
-  padding: 1.5em;
+  margin: 1rem auto 0 auto;
+  padding: 1.5rem;
   align-items: center;
   background-color: var(--color-orange);
-  border-radius: 2em 2em 0 0;
+  border-radius: 2rem 2rem 0 0;
 }
 
 header svg {
@@ -49,40 +49,92 @@ header a {
 }
 
 main {
-  width: 90vw;
+  width: 70vw;
   margin: 0 auto;
   border: 1px solid white;
   border-top: 0;
-  border-radius: 0 0 2em 2em;
-  height: 50vh;
+  border-radius: 0 0 2rem 2rem;
   background-color: white;
-  /* background-color: var(--color-background); */
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
-main ol {
+main ol, #jaaroverzicht div {
   display: flex;
   justify-content: space-around;
   text-align: center;
   width: 100%;
+  flex-wrap: wrap;
 }
 
-main ol li{
-  width: 12%;
+main ol li, #jaaroverzicht button {
+  width: 80%;
   align-items: center;
   display: flex;
-  flex-direction: column;
-  padding: 2em 0.5em;
+  padding: 0.5rem 0.5rem;
   background-color: var(--color-background);
   color: white;
-  border-radius: 2em;
+  border-radius: 2rem;
   border: 1px solid white;
+  justify-content: center;
+  max-height: 4.5rem;
+  margin: 0.2rem;
 }
 
 main ol li svg {
   fill: white;
-  width: 50%;
-  max-height: 5em;
-  margin: 1em 0;
+  width: 5%;
+  max-height: 2.5rem;
+  margin: 1rem;
+  order: -1;
+}
+
+button {
+  padding: 0.5rem;
+}
+
+li:focus, button:focus {
+  background-color: palegoldenrod;
+}
+
+form {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form select, form input {
+  background-color: var(--color-orange);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+}
+
+form select {
+  margin-bottom: 1.5rem;
+}
+
+.onzichtbaar {
+  display: none;
+}
+
+/* #jaaroverzicht ol li {
+  width: 20%;
+  height: 4rem;
+} */
+
+#jaaroverzicht button {
+  width: 20%;
+  height: 4rem;
+}
+
+li p {
+  font-size: 0.01rem;
 }
