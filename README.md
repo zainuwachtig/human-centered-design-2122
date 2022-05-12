@@ -72,6 +72,7 @@ Voor de eerste week had ik nog niet genoeg voorbereid om iets te kunnen testen e
 
 ### Week 2
 
+![Eerste versie van het sportschema](https://user-images.githubusercontent.com/74155415/168046949-c0bf9ba9-fdd0-4dec-af2c-3623fdfce893.png)
 Voor de tweede week heb ik iets gemaakt op basis van de inzichten van vorige week. Zo heb ik gebruik gemaakt van vlakken met een duidelijk contrast. Ook staan er grote iconen zodat wanneer ze dicht op het beeld zit, ze snel(ler) kan zien wat voor soort training het is.
 
 Een paar inzichten uit het testen van deze week waren:
@@ -84,6 +85,7 @@ Een paar inzichten uit het testen van deze week waren:
 
 ### Week 3
 
+<img width="1039" alt="Definitieve versie" src="https://user-images.githubusercontent.com/74155415/168047481-ee778dc9-9b58-4acf-a402-48b4d8fa0aa0.png">
 Voor de derde week heb ik de vorige versie aangepast met de trainingen horizontaal, zodat die de datum en wat voor soort training in één keer uitspreekt. Ook heb ik een jaarrooster toegevoegd met daarin de wedstrijden en wanneer de Olympische Spelen zijn. Ook heb ik de zoekfunctie uitgewerkt en op de knoppen een contrastkleur toegevoegd op de focus. Ze was erg tevreden met de applicatie en had dus niet veel meer op te merken.
 
 Inzichten uit het testen van deze week:
@@ -95,7 +97,7 @@ Inzichten uit het testen van deze week:
 
 ## Reflectie
 
-Ik ben nog niet klaar, maar ben wel tevreden over mijn prototype. Ook dat Larissa het een goed werkende applicatie vindt, doet me goed want daar doen we het voor, exclusive design. Wel hoef ik me in het vervolg niet druk te maken of wat ik heb gemaakt voldoende is om te testen, je test voor haar en niet voor jezelf. Dat is iets wat ik meeneem in het vervolg. Ook vind ik dat ik het vak wel gehaald heb op basis van de drie leerdoelen:
+Ik ben tevreden over het prototype. Ook dat Larissa het een goed werkende applicatie vindt doet me goed want daar doen we het voor, exclusive design. Wel hoef ik me in het vervolg niet druk te maken of wat ik heb gemaakt voldoende is om te testen, je test voor haar en niet voor jezelf. Dat is iets wat ik meeneem in het vervolg. Ook vind ik dat ik het vak wel gehaald heb op basis van de drie leerdoelen:
 
 1. Leren hoe je (design) principles in een ontwerp kan toepassen.
    Ja, ik vond de principles best prima toe te passen, alleen het stukje add nonsense was wat lastiger. In de laatste week wist ik gelukkig nog wel wat toe te voegen om het voor Larissa nog plezieriger te maken.
